@@ -32,7 +32,7 @@ func _process(delta):
 		State.READING:
 			if Input.is_action_just_pressed("ui_accept"):
 				label.percent_visible = 1.0
-				$Tween.stop_all()
+				$Tween.remove_all()
 				end_symbol.text = "v"
 				change_state(State.FINISHED)
 		State.FINISHED:
